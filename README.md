@@ -6,15 +6,9 @@ A clean and minimal **To-Do List** application built with **HTML**, **CSS**, and
 
 ## 🚀 Live Demo
 
-> [🔗 Click here to view the live demo](#)  
-(*Replace this with your GitHub Pages or Netlify link if deployed*)
+> [🔗 Click here to view the live demo](https://todoolist-js.netlify.app/)  
 
 ---
-
-## 📸 Screenshot
-
-![To-Do List Screenshot](./screenshot.png)  
-*Clean UI with input fields, due dates, and delete buttons*
 
 ---
 
