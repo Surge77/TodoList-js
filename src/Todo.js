@@ -13,10 +13,7 @@ function renderTodoList(){
     todoListHTML += `
       <div>${name}</div>
       <div>${dueDate}</div>
-      <button class='delete-todo-button' onclick='
-        todoList.splice(${index},1); //1 is the number of elements we want to delete
-        renderTodoList();
-      '>Delete</button>
+      <button class='delete-todo-button js-delete-button'>Delete</button>
        `; //We generated the HTML for each element in the array
   })
 
@@ -37,7 +34,19 @@ function renderTodoList(){
 
   document.querySelector('.js-todoList').innerHTML = todoListHTML; //We render the HTML to the DOM 
 
+  //For adding event listener to each delete button we use .querySelectorAll() which returns an array of elements and after that we use forEach loop to add the event listener to each button
+  document.querySelectorAll('.js-delete-button').forEach((deleteButton,index)=>{
+    deleteButton.addEventListener('click',() =>{
+      todoList.splice(index,1); //1 is the number of elements we want to delete
+        renderTodoList();
+    })
+  })
+
 }
+
+document.querySelector('.js-add-button').addEventListener('click',() =>{
+  addTask();
+})
 
 function addTask(){
   const inputElement = document.querySelector('.Todo-input');
